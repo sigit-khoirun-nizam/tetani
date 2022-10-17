@@ -88,7 +88,6 @@
 						</a>
 					</li>
 
-
 					<li class="nav-title">DATA MASTER</li>
 					<li class="nav-item">
 						<a data-toggle="collapse" href="#penyedia" aria-expanded="true">
@@ -97,43 +96,95 @@
 						<div class="collapse " id="penyedia">
 							<ul class="">
 								<li>
-									<a href="">
+									<a href="<?= site_url("ngadimin") ?>">
 										<span class="">Petani</span>
 									</a>
 								</li>
 								<li>
-									<a href="">
-										<span class="">Petani</span>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Afiliasi</span>
 									</a>
 								</li>
 							</ul>
 						</div>
 					</li>
+
 					<li class="nav-item">
-						<a href="<?= site_url("ngadimin/pesanan") ?>">
-							<p>Transporter</p>
+						<a data-toggle="collapse" href="#transporter" aria-expanded="true">
+							<span>Transporter</span>
 						</a>
+						<div class="collapse" id="transporter">
+							<ul class="">
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Data Transporter</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Driver Transporter</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</li>
+
 					<li class="nav-item">
-						<a href="<?= site_url("ngadimin/pesanan") ?>">
+						<a href="<?= site_url("ngadimin") ?>">
 							<p>Kemitraan</p>
 						</a>
 					</li>
+
 					<li class="nav-item">
-						<a href="<?= site_url("ngadimin/pesanan") ?>">
-							<p>Pelanggan</p>
+						<a data-toggle="collapse" href="#pelanggan" aria-expanded="true">
+							<span>Pelanggan</span>
+						</a>
+						<div class="collapse" id="pelanggan">
+							<ul class="">
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Grosir</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Pabrik</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Retail</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a data-toggle="collapse" href="#perusahaan" aria-expanded="true">
+							<span>Perusahaan</span>
+						</a>
+						<div class="collapse" id="perusahaan">
+							<ul class="">
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Data Perusahaan</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?= site_url("ngadimin") ?>">
+										<span class="">Karyawan</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a href="<?= site_url("ngadimin") ?>">
+							<p>Tahun</p>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a href="<?= site_url("ngadimin/pesanan") ?>">
-							<p>Perusahaan</p>
-						</a>
-					</li>
-
-
-
-
-
 
 					<li class="nav-title">DATA PESANAN</li>
 					<li class="nav-item <?php echo (isset($menu) and $menu == 2) ? "active" : "" ?>">

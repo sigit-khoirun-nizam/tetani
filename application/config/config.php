@@ -25,7 +25,7 @@ date_default_timezone_set('Asia/Jakarta');
 |
 */
 // $what = explode('/', $_SERVER['REQUEST_URI']);
-$config['base_url'] = "http://139.180.173.43/tetani/";
+$config['base_url'] = "http://localhost/tetani/";
 
 /*
 |--------------------------------------------------------------------------
@@ -382,7 +382,7 @@ $config['encryption_key'] = 'AuwDeeNa2019?#OKay';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'sess_stored_';
 $config['sess_expiration'] = 600000;
-$config['sess_save_path'] = FCPATH.'sessdrive/';
+$config['sess_save_path'] = sys_get_temp_dir();
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = TRUE;
