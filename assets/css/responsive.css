@@ -1,0 +1,111 @@
+
+@media screen and (max-width: 600px) {
+    .showsmall-inline{
+        display: inline-block;
+    }
+    .showsmall{
+        display: block;
+    }
+    .hidesmall{
+        display: none;
+    }
+
+    /* NOTIF BOOSTER */
+    .toaster{
+        width: 94%;
+        bottom: 24vw;
+    }
+
+    /* SLIDER */
+    .slider-item{
+        width: 76vw;
+        min-width: 200px;
+        margin: 0px 3.2vw;
+    }
+    .slider-item img{
+        margin: 12px 0px;
+    }
+    .slider-item.slick-center img{
+        box-shadow: 0px 0px 8px #d0d1d4;
+    }
+
+    /* TESTISMONI */
+    .testismoni .slick-next{
+        right: 0px;
+    }
+    .testismoni .slick-prev{
+        left: -10px;
+    }
+
+    /* KERANJANG */
+    .keranjang{
+        padding: 16px 0px;
+    }
+    .keranjang .fs-20{
+        font-size: 16px;
+    }
+
+    /* SIGN IN */
+    #signin,
+    #signin_otp,
+    #signup,
+    #signup_otp{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .bg-sign{
+        padding: 0px 8px;
+        margin-bottom: 60px;
+    }
+    .select2{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* LIST PRODUK */
+    .produk-wrap{
+        padding: 8px;
+    }
+    .produk-item{
+        margin: 0;
+        padding: 8px;
+    }
+    .block2{
+        box-shadow: 0px 0px 8px #d0d1d4;
+    }
+
+    /* KATEGORI */
+    .cat-bg{
+        height: 24vw;
+        width: 24vw;
+        background-size: cover;
+        margin: 0px 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+    }
+    .cat-nama{
+        font-size: 90%;
+    }
+    .cat{
+        padding: 0px 20px;
+    }
+    .cat .slick-next{
+        right: 4px;
+    }
+    .cat .slick-prev{
+        left: -4px;
+        z-index: 1;
+    }
+
+    /* BANNER */
+    .banner{
+        text-align: center;
+    }
+    .banner h2{
+        font-size: 160%;
+    }
+    .banner h5{
+        font-size: 100%;
+    }
+}
