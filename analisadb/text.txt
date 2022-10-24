@@ -1,0 +1,15 @@
+A. d_transporter
+
+a. id
+b. kode_transporter
+c. nama
+d. no_hp
+e. email
+f. alamat
+g. propinsi
+h. kota
+i. armada_transporter
+j. kota
+k. status
+l. account_bank
+m. rekening_bank
