@@ -123,7 +123,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("drivertransporter/index") ?>">
 										<span class="">Driver Transporter</span>
 									</a>
 								</li>
