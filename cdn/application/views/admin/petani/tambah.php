@@ -85,10 +85,10 @@
 
 							<div class="form-group">
 								<label for="kategori_produk">Kategori Produk</label>
-									<input type="checkbox" name="kategori_produk[]" value="Buah" />Buah <br>
+									<!-- <input type="checkbox" name="kategori_produk[]" value="Buah" />Buah <br>
 									<input type="checkbox" name="kategori_produk[]" value="Hasil Kebun" />Hasil Kebun <br>
 									<input type="checkbox" name="kategori_produk[]" value="Rempah" />Rempah <br>
-									<input type="checkbox" name="kategori_produk[]" value="Semuanya" />Semuanya <br>
+									<input type="checkbox" name="kategori_produk[]" value="Semuanya" />Semuanya <br> -->
 
 									<input class="form-control" type="text" name="kategori_produk" id="kategori_produk" value=" <?= set_value('kategori_produk'); ?>" />
 								<small class="text-danger">

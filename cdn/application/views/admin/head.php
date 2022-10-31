@@ -118,7 +118,7 @@
 						<div class="collapse" id="transporter">
 							<ul class="">
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("datatransporter/index") ?>">
 										<span class="">Data Transporter</span>
 									</a>
 								</li>
