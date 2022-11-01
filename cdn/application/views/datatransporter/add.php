@@ -1,12 +1,5 @@
-<div class="container pt-5">
-    <h3><?= $title ?></h3>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb ">
-            <li class="breadcrumb-item"><a>Data Transporter</a></li>
-            <li class="breadcrumb-item "><a href="<?= base_url('datatransporter/index'); ?>">List Data Transporter</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
-        </ol>
-    </nav>
+<div class="container">
+    <h3 class="mb-2"><?= $title ?></h3>
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -76,7 +69,7 @@
                             </small>
                         </div>
                     </div>
-<!--form-->
+                    <!--form-->
                 </div>
             </div>
         </div>

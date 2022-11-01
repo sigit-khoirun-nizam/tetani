@@ -14,7 +14,7 @@ class DriverTransporter extends CI_Controller
     {
         $data["title"] = "List data transporter";
         $data["data_transporter"] = $this->DriverTransporter_model->getAll();
-        $this->load->view('admin/head',["menu"=>21]);
+        $this->load->view('admin/head', ["menu" => 21]);
         $this->load->view('drivertransporter/index', $data);
         $this->load->view('admin/foot');
     }
@@ -36,16 +36,16 @@ class DriverTransporter extends CI_Controller
         }
 
         $data["title"] = "Tambah data driver";
-        $this->load->view('admin/head', ["menu"=>21]);
+        $this->load->view('admin/head', ["menu" => 21]);
         $this->load->view('drivertransporter/add', $data);
         $this->load->view('admin/foot');
     }
 
     public function edit($id = null)
     {
-        if (!isset($id)) redirect('datatransporter');
+        if (!isset($id)) redirect('drivertransporter');
 
-        $Dtransporter = $this->DataTransporter_model;
+        $Dtransporter = $this->DriverTransporter_model;
         $validation = $this->form_validation;
         $validation->set_rules($Dtransporter->rules());
 
@@ -56,15 +56,15 @@ class DriverTransporter extends CI_Controller
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button></div>');
-            redirect("datatransporter");
+            redirect("drivertransporter");
         }
 
         $data["title"] = "Edit Data Mahasiswa";
-        $data["data_transporter"] = $Dtransporter->getById($id);
-        if (!$data["data_transporter"]) show_404();
+        $data["driver_transporter"] = $Dtransporter->getById($id);
+        if (!$data["driver_transporter"]) show_404();
 
-        $this->load->view('admin/head', ["menu"=>21]);
-        $this->load->view('datatransporter/edit', $data);
+        $this->load->view('admin/head', ["menu" => 21]);
+        $this->load->view('drivertransporter/edit', $data);
         $this->load->view('admin/foot');
     }
 
@@ -73,10 +73,10 @@ class DriverTransporter extends CI_Controller
         $id = $this->input->get('id');
         if (!isset($id)) show_404();
 
-        $this->DataTransporter_model->delete($id);
+        $this->DriverTransporter_model->delete($id);
 
         $msg['success'] = true;
-        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         Data Transporter berhasil dihapus.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>

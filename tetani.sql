@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Nov 2022 pada 11.38
+-- Waktu pembuatan: 01 Nov 2022 pada 12.19
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -137,6 +137,13 @@ CREATE TABLE `blw_driver_transporter` (
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `blw_driver_transporter`
+--
+
+INSERT INTO `blw_driver_transporter` (`id`, `kode_driver`, `nama_driver`, `nama_transporter`, `no_hp`, `status`) VALUES
+(1, NULL, 'Halo', 'Tita', '085843510263', 'Aktif');
+
 -- --------------------------------------------------------
 
 --
@@ -162,7 +169,6 @@ CREATE TABLE `blw_d_transporter` (
 --
 
 INSERT INTO `blw_d_transporter` (`id`, `kode_transporter`, `nama`, `no_hp`, `email`, `alamat`, `provinsi`, `kota`, `status`, `account_bank`, `rekening_bank`) VALUES
-(3, NULL, 'tes', '82394829424', 'tes', 'tes', 'tes', 'tes', 'Aktif', 'tes', 'tes'),
 (4, NULL, 'tes', '123456789', 'tes', 'tes', 'tes', 'tes', 'Tidak Aktif', 'tes', 'tes'),
 (5, NULL, 'tes', '12343546456456', 'tes', 'tes', 'tes', 'tes', 'Aktif', 'tes', 'tes'),
 (8, NULL, 'tita', '086875643456', 'halo', 'halo', 'halo', 'halo', 'Aktif', 'BRI', 'rtays');
@@ -9313,13 +9319,13 @@ ALTER TABLE `blw_booster`
 -- AUTO_INCREMENT untuk tabel `blw_driver_transporter`
 --
 ALTER TABLE `blw_driver_transporter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `blw_d_transporter`
 --
 ALTER TABLE `blw_d_transporter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `blw_grosir`

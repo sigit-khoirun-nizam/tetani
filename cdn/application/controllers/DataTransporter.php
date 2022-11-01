@@ -76,7 +76,7 @@ class DataTransporter extends CI_Controller
         $this->DataTransporter_model->delete($id);
 
         $msg['success'] = true;
-        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         Data Transporter berhasil dihapus.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
