@@ -1,80 +1,80 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Petani extends CI_Controller
+class Kemitraan extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("petani_model"); //load model Petani
+        $this->load->model("kemitraan_model"); //load model kemitraan
     }
 
     //method pertama yang akan di eksekusi
-    public function index() 
+    public function index()
     {
-        //ambil fungsi getAll untuk menampilkan semua data Petani
-        $data["data_petani"] = $this->petani_model->getAll();
+        //ambil fungsi getAll untuk menampilkan semua data kemitraan
+        $data["data_kemitraan"] = $this->kemitraan_model->getAll();
         
-        $this->load->view('admin/head',["menu"=>20]);
-        $this->load->view('admin/petani/index', $data);
+        $this->load->view('admin/head',["menu"=>46]);
+        $this->load->view('admin/kemitraan/index', $data);
         $this->load->view('admin/foot');
     }
 
-    //method add digunakan untuk menampilkan form tambah data Petani
+    //method add digunakan untuk menampilkan form tambah data kemitraan
     public function add()
     {
-        $data["data_petani"] = $this->petani_model->getAll();
-        $Petani = $this->petani_model; //objek model
+        $data["data_kemitraan"] = $this->kemitraan_model->getAll();
+        $Kemitraan = $this->kemitraan_model; //objek model
         $validation = $this->form_validation; //objek form validation
-        $validation->set_rules($Petani->rules()); //menerapkan rules validasi pada petani_model
-        //kondisi jika semua kolom telah divalidasi, maka akan menjalankan method save pada petani_model
+        $validation->set_rules($Kemitraan->rules()); //menerapkan rules validasi pada kemitraan_model
+        //kondisi jika semua kolom telah divalidasi, maka akan menjalankan method save pada kemitraan_model
         if ($validation->run()) {
-            $this->petani_model->save();
+            $this->kemitraan_model->save();
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                  Data Petani berhasil <strong>disimpan!</strong>
+                  Data Kemitraan berhasil <strong>disimpan!</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>');
-            redirect("petani/index");
+            redirect("kemitraan/index");
         }
-        $this->load->view('admin/head',["menu"=>20]);
-        $this->load->view('admin/petani/tambah', $data);
+        $this->load->view('admin/head',["menu"=>46]);
+        $this->load->view('admin/kemitraan/tambah', $data);
         $this->load->view('admin/foot');
     }
 
     public function edit($id = null)
     {
-        if (!isset($id)) redirect('petani/index');
+        if (!isset($id)) redirect('kemitraan/index');
 
-        $Petani = $this->petani_model;
+        $Kemitraan = $this->kemitraan_model;
         $validation = $this->form_validation;
-        $validation->set_rules($Petani->rules());
+        $validation->set_rules($Kemitraan->rules());
 
         if ($validation->run()) {
-            $Petani->update();
+            $Kemitraan->update();
             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                  Data Petani berhasil <strong>disimpan!</strong>
+                  Data Kemitraan berhasil <strong>disimpan!</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>');
-            redirect("petani/index");
+            redirect("kemitraan/index");
         }
-        $data["data_petani"] = $Petani->getById($id);
-        $this->load->view('admin/head',["menu"=>20]);
-        $this->load->view('admin/petani/edit', $data);
+        $data["data_kemitraan"] = $Kemitraan->getById($id);
+        $this->load->view('admin/head',["menu"=>46]);
+        $this->load->view('admin/kemitraan/edit', $data);
         $this->load->view('admin/foot');
     }
 
     public function delete()
     {
-        $id = $this->input->get('id_petani');
+        $id = $this->input->get('id_kemitraan');
         if (!isset($id)) show_404();
-        $this->petani_model->delete($id);
+        $this->kemitraan_model->delete($id);
         $msg['success'] = true;
         $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-              Data Petani berhasil <strong>dihapus!</strong>
+              Data Kemitraan berhasil <strong>dihapus!</strong>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

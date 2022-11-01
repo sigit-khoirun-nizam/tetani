@@ -14,7 +14,7 @@ class DriverTransporter extends CI_Controller
     {
         $data["title"] = "List data transporter";
         $data["data_transporter"] = $this->DriverTransporter_model->getAll();
-        $this->load->view('admin/head', $data);
+        $this->load->view('admin/head',["menu"=>21]);
         $this->load->view('drivertransporter/index', $data);
         $this->load->view('admin/foot');
     }
@@ -36,7 +36,7 @@ class DriverTransporter extends CI_Controller
         }
 
         $data["title"] = "Tambah data driver";
-        $this->load->view('admin/head', $data);
+        $this->load->view('admin/head', ["menu"=>21]);
         $this->load->view('drivertransporter/add', $data);
         $this->load->view('admin/foot');
     }
@@ -63,7 +63,7 @@ class DriverTransporter extends CI_Controller
         $data["data_transporter"] = $Dtransporter->getById($id);
         if (!$data["data_transporter"]) show_404();
 
-        $this->load->view('admin/head', $data);
+        $this->load->view('admin/head', ["menu"=>21]);
         $this->load->view('datatransporter/edit', $data);
         $this->load->view('admin/foot');
     }

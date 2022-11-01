@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Okt 2022 pada 02.32
+-- Waktu pembuatan: 01 Nov 2022 pada 11.38
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -125,6 +125,21 @@ CREATE TABLE `blw_booster` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `blw_driver_transporter`
+--
+
+CREATE TABLE `blw_driver_transporter` (
+  `id` int(11) NOT NULL,
+  `kode_driver` varchar(100) DEFAULT NULL,
+  `nama_driver` varchar(50) NOT NULL,
+  `nama_transporter` varchar(100) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `blw_d_transporter`
 --
 
@@ -149,7 +164,37 @@ CREATE TABLE `blw_d_transporter` (
 INSERT INTO `blw_d_transporter` (`id`, `kode_transporter`, `nama`, `no_hp`, `email`, `alamat`, `provinsi`, `kota`, `status`, `account_bank`, `rekening_bank`) VALUES
 (3, NULL, 'tes', '82394829424', 'tes', 'tes', 'tes', 'tes', 'Aktif', 'tes', 'tes'),
 (4, NULL, 'tes', '123456789', 'tes', 'tes', 'tes', 'tes', 'Tidak Aktif', 'tes', 'tes'),
-(5, NULL, 'tes', '12343546456456', 'tes', 'tes', 'tes', 'tes', 'Aktif', 'tes', 'tes');
+(5, NULL, 'tes', '12343546456456', 'tes', 'tes', 'tes', 'tes', 'Aktif', 'tes', 'tes'),
+(8, NULL, 'tita', '086875643456', 'halo', 'halo', 'halo', 'halo', 'Aktif', 'BRI', 'rtays');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `blw_grosir`
+--
+
+CREATE TABLE `blw_grosir` (
+  `id_grosir` int(11) NOT NULL,
+  `kode_grosir` varchar(225) NOT NULL,
+  `nama_grosir` varchar(225) NOT NULL,
+  `tipe_penyedia` varchar(225) NOT NULL DEFAULT 'Grosir',
+  `no_hp` varchar(225) NOT NULL,
+  `email` varchar(225) NOT NULL,
+  `alamat` varchar(225) NOT NULL,
+  `kota` varchar(225) NOT NULL,
+  `provinsi` varchar(225) NOT NULL,
+  `kategori_produk` varchar(225) NOT NULL,
+  `status` enum('Aktif','Tidak Aktif') NOT NULL,
+  `nama_bank` varchar(225) NOT NULL,
+  `rekening_bank` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `blw_grosir`
+--
+
+INSERT INTO `blw_grosir` (`id_grosir`, `kode_grosir`, `nama_grosir`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
+(1, '000001', 'Clarissa', 'Grosir', '085843510263', 'clarissa@gmail.com', 'Jl. Sentosa', 'Surabaya', 'Jawa Timur', 'Palawija', 'Aktif', 'BRI', 'ASD123');
 
 -- --------------------------------------------------------
 
@@ -7787,6 +7832,33 @@ INSERT INTO `blw_kec` (`id`, `idkab`, `nama`, `rajaongkir`, `kodepos`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `blw_kemitraan`
+--
+
+CREATE TABLE `blw_kemitraan` (
+  `id_kemitraan` int(11) NOT NULL,
+  `kode_kemitraan` varchar(255) NOT NULL,
+  `nama_kemitraan` varchar(225) NOT NULL,
+  `kategori_produk` varchar(225) NOT NULL,
+  `no_hp` varchar(225) NOT NULL,
+  `kota` varchar(225) NOT NULL,
+  `provinsi` varchar(225) NOT NULL,
+  `nama_rekening` varchar(225) NOT NULL,
+  `no_rekening` varchar(225) NOT NULL,
+  `status` enum('Aktif','Tidak Aktif') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `blw_kemitraan`
+--
+
+INSERT INTO `blw_kemitraan` (`id_kemitraan`, `kode_kemitraan`, `nama_kemitraan`, `kategori_produk`, `no_hp`, `kota`, `provinsi`, `nama_rekening`, `no_rekening`, `status`) VALUES
+(1, '000001', 'nura', 'buah', '082341779514', 'Bojonegoro', 'Jawa Timur', 'nur', '32415617', 'Aktif'),
+(3, '000002', 'fia', 'buku galau', '9292002020', 'malang', 'jawa timur', 'gdgd', '773829276', 'Aktif');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `blw_konfirmasi`
 --
 
@@ -7896,6 +7968,35 @@ CREATE TABLE `blw_otplogin` (
   `status` int(11) NOT NULL COMMENT '0=belum,1=berhasil,2=gagal',
   `masuk` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `blw_pabrik`
+--
+
+CREATE TABLE `blw_pabrik` (
+  `id_pabrik` int(11) NOT NULL,
+  `kode_pabrik` varchar(255) NOT NULL,
+  `nama_pabrik` varchar(255) NOT NULL,
+  `tipe_penyedia` varchar(255) NOT NULL DEFAULT 'Pabrik',
+  `no_hp` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `kota` varchar(255) NOT NULL,
+  `provinsi` varchar(255) NOT NULL,
+  `kategori_produk` varchar(255) NOT NULL,
+  `status` enum('Aktif','Tidak Aktif') NOT NULL,
+  `nama_bank` varchar(255) NOT NULL,
+  `rekening_bank` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `blw_pabrik`
+--
+
+INSERT INTO `blw_pabrik` (`id_pabrik`, `kode_pabrik`, `nama_pabrik`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
+(1, '000001', 'Indofood', 'Pabrik', '085654765825', 'indofood@gmail.com', 'Jl. Andan Sari No.50', 'Jakarta Timur', 'DKI Jakarta', 'Buah', 'Aktif', 'BCA', 'TYU456');
 
 -- --------------------------------------------------------
 
@@ -8421,6 +8522,35 @@ INSERT INTO `blw_rekeningbank` (`id`, `nama`, `logo`, `kodebank`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `blw_retail`
+--
+
+CREATE TABLE `blw_retail` (
+  `id_retail` int(11) NOT NULL,
+  `kode_retail` varchar(255) NOT NULL,
+  `nama_retail` varchar(255) NOT NULL,
+  `tipe_penyedia` varchar(255) NOT NULL DEFAULT 'Retail',
+  `no_hp` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `kota` varchar(255) NOT NULL,
+  `provinsi` varchar(255) NOT NULL,
+  `kategori_produk` varchar(255) NOT NULL,
+  `status` enum('Aktif','Tidak Aktif') NOT NULL,
+  `nama_bank` varchar(255) NOT NULL,
+  `rekening_bank` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `blw_retail`
+--
+
+INSERT INTO `blw_retail` (`id_retail`, `kode_retail`, `nama_retail`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
+(1, '000001', 'Kelontong Pak Jo', 'Retail', '085456345895', 'pakjo@gmail.com', 'Jl. Gatotkoco No.9', 'Sidoarjo', 'Jawa Timur', 'Rempah', 'Aktif', 'BNI', 'BNM789');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `blw_review`
 --
 
@@ -8839,10 +8969,22 @@ ALTER TABLE `blw_booster`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `blw_driver_transporter`
+--
+ALTER TABLE `blw_driver_transporter`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `blw_d_transporter`
 --
 ALTER TABLE `blw_d_transporter`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `blw_grosir`
+--
+ALTER TABLE `blw_grosir`
+  ADD PRIMARY KEY (`id_grosir`);
 
 --
 -- Indeks untuk tabel `blw_historyongkir`
@@ -8881,6 +9023,12 @@ ALTER TABLE `blw_kec`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `blw_kemitraan`
+--
+ALTER TABLE `blw_kemitraan`
+  ADD PRIMARY KEY (`id_kemitraan`);
+
+--
 -- Indeks untuk tabel `blw_konfirmasi`
 --
 ALTER TABLE `blw_konfirmasi`
@@ -8915,6 +9063,12 @@ ALTER TABLE `blw_otpdaftar`
 --
 ALTER TABLE `blw_otplogin`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `blw_pabrik`
+--
+ALTER TABLE `blw_pabrik`
+  ADD PRIMARY KEY (`id_pabrik`);
 
 --
 -- Indeks untuk tabel `blw_page`
@@ -8999,6 +9153,12 @@ ALTER TABLE `blw_rekening`
 --
 ALTER TABLE `blw_rekeningbank`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `blw_retail`
+--
+ALTER TABLE `blw_retail`
+  ADD PRIMARY KEY (`id_retail`);
 
 --
 -- Indeks untuk tabel `blw_review`
@@ -9150,10 +9310,22 @@ ALTER TABLE `blw_booster`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `blw_driver_transporter`
+--
+ALTER TABLE `blw_driver_transporter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `blw_d_transporter`
 --
 ALTER TABLE `blw_d_transporter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `blw_grosir`
+--
+ALTER TABLE `blw_grosir`
+  MODIFY `id_grosir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `blw_historyongkir`
@@ -9192,6 +9364,12 @@ ALTER TABLE `blw_kec`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6995;
 
 --
+-- AUTO_INCREMENT untuk tabel `blw_kemitraan`
+--
+ALTER TABLE `blw_kemitraan`
+  MODIFY `id_kemitraan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `blw_konfirmasi`
 --
 ALTER TABLE `blw_konfirmasi`
@@ -9228,6 +9406,12 @@ ALTER TABLE `blw_otplogin`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `blw_pabrik`
+--
+ALTER TABLE `blw_pabrik`
+  MODIFY `id_pabrik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `blw_page`
 --
 ALTER TABLE `blw_page`
@@ -9255,7 +9439,7 @@ ALTER TABLE `blw_pesan`
 -- AUTO_INCREMENT untuk tabel `blw_petani`
 --
 ALTER TABLE `blw_petani`
-  MODIFY `id_petani` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_petani` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `blw_preorder`
@@ -9310,6 +9494,12 @@ ALTER TABLE `blw_rekening`
 --
 ALTER TABLE `blw_rekeningbank`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+
+--
+-- AUTO_INCREMENT untuk tabel `blw_retail`
+--
+ALTER TABLE `blw_retail`
+  MODIFY `id_retail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `blw_review`

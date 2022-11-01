@@ -112,6 +112,7 @@
 					</li>
 
 					<li class="nav-item">
+						<li class="nav-item <?php echo (isset($menu) and $menu == 21) ? "active" : "" ?>">
 						<a data-toggle="collapse" href="#transporter" aria-expanded="true">
 							<span>Transporter</span>
 						</a>
@@ -129,37 +130,40 @@
 								</li>
 							</ul>
 						</div>
+						</li>
 					</li>
 
-					<li class="nav-item">
-						<a href="<?= site_url("ngadimin") ?>">
+					<li class="nav-item <?php echo (isset($menu) and $menu == 46) ? "active" : "" ?>">
+						<a href="<?= site_url("kemitraan") ?>">
 							<p>Kemitraan</p>
 						</a>
 					</li>
 
 					<li class="nav-item">
+						<li class="nav-item <?php echo (isset($menu) and $menu == 22) ? "active" : "" ?>">
 						<a data-toggle="collapse" href="#pelanggan" aria-expanded="true">
 							<span>Pelanggan</span>
 						</a>
 						<div class="collapse" id="pelanggan">
 							<ul class="">
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("grosir") ?>">
 										<span class="">Grosir</span>
 									</a>
 								</li>
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("pabrik") ?>">
 										<span class="">Pabrik</span>
 									</a>
 								</li>
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("retail") ?>">
 										<span class="">Retail</span>
 									</a>
 								</li>
 							</ul>
 						</div>
+						</li>
 					</li>
 
 					<li class="nav-item">
