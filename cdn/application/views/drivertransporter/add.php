@@ -26,6 +26,14 @@
                         ?>
 
                         <div class="form-group">
+                            <label for="kode_driver">Kode</label>
+                            <input class="form-control" type="text" name="kode_driver" id="kode_driver" value=" <?= $kode; ?>" readonly/>
+                            <small class="text-danger">
+                                <?php echo form_error('kode_driver') ?>
+                            </small>
+                        </div>
+
+                        <div class="form-group">
                             <label for="nama driver">Nama Driver</label>
                             <input class="form-control" type="text" name="nama_driver" id="nama_driver" value=" <?= set_value('nama_driver'); ?>" />
                             <small class="text-danger">

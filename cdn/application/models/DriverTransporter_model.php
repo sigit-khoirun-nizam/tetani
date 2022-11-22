@@ -78,6 +78,26 @@ class DriverTransporter_model extends CI_Model
     {
         return $this->db->delete($this->table, array('id' => $id));
     }
+
+    public function kode()
+    {
+        $this->db->select('RIGHT(blw_driver_transporter.kode_driver,2) as kode_driver', FALSE);
+        $this->db->order_by('kode_driver', 'DESC');
+        $this->db->limit(1);
+
+        $query = $this->db->get('blw_driver_transporter');
+        if($query->num_rows() <> 0){      
+            //cek kode jika telah tersedia    
+            $data = $query->row();      
+            $kode = intval($data->kode_driver) + 1; 
+       }
+       else{      
+            $kode = 1;  //cek jika kode belum terdapat pada table
+       }
+           $batas = str_pad($kode, 5, "0", STR_PAD_LEFT);    
+           $kodetampil = "0".$batas;  //format kode
+           return $kodetampil;
+    }
 }
 
 

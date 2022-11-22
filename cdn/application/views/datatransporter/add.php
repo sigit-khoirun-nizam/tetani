@@ -11,6 +11,16 @@
                     ?>
 
                     <div class="form-group row">
+                        <label for="kode_transporter" class="col-sm-4 col-form-label">Kode</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="kode_transporter" name="kode_transporter" value=" <?= $kode; ?>" readonly>
+                            <small class="text-danger">
+                                <?php echo form_error('kode_transporter') ?>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="nama" class="col-sm-4 col-form-label">Nama</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="nama" name="nama" value=" <?= set_value('nama'); ?>">

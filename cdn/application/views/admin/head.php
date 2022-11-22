@@ -90,29 +90,29 @@
 
 					<li class="nav-title">DATA MASTER</li>
 					<li class="nav-item">
-						<li class="nav-item <?php echo (isset($menu) and $menu == 20) ? "active" : "" ?>">
-							<a data-toggle="collapse" href="#penyedia" aria-expanded="true">
-								<span>Penyedia</span>
-							</a>
-							<div class="collapse " id="penyedia">
-								<ul class="">
-									<li>
-										<a href="<?= site_url("petani") ?>">
-											<span class="">Petani</span>
-										</a>
-									</li>
-									<li>
-										<a href="<?= site_url("afiliasi") ?>">
-											<span class="">Afiliasi</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</li>
+					<li class="nav-item <?php echo (isset($menu) and $menu == 20) ? "active" : "" ?>">
+						<a data-toggle="collapse" href="#penyedia" aria-expanded="true">
+							<span>Penyedia</span>
+						</a>
+						<div class="collapse " id="penyedia">
+							<ul class="">
+								<li>
+									<a href="<?= site_url("petani") ?>">
+										<span class="">Petani</span>
+									</a>
+								</li>
+								<li>
+									<a href="<?= site_url("afiliasi") ?>">
+										<span class="">Afiliasi</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
 					</li>
 
 					<li class="nav-item">
-						<li class="nav-item <?php echo (isset($menu) and $menu == 21) ? "active" : "" ?>">
+					<li class="nav-item <?php echo (isset($menu) and $menu == 21) ? "active" : "" ?>">
 						<a data-toggle="collapse" href="#transporter" aria-expanded="true">
 							<span>Transporter</span>
 						</a>
@@ -130,7 +130,7 @@
 								</li>
 							</ul>
 						</div>
-						</li>
+					</li>
 					</li>
 
 					<li class="nav-item <?php echo (isset($menu) and $menu == 46) ? "active" : "" ?>">
@@ -140,7 +140,7 @@
 					</li>
 
 					<li class="nav-item">
-						<li class="nav-item <?php echo (isset($menu) and $menu == 22) ? "active" : "" ?>">
+					<li class="nav-item <?php echo (isset($menu) and $menu == 22) ? "active" : "" ?>">
 						<a data-toggle="collapse" href="#pelanggan" aria-expanded="true">
 							<span>Pelanggan</span>
 						</a>
@@ -163,7 +163,7 @@
 								</li>
 							</ul>
 						</div>
-						</li>
+					</li>
 					</li>
 
 					<li class="nav-item">
@@ -187,7 +187,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a href="<?= site_url("ngadimin") ?>">
+						<a href="<?= site_url("datatahun") ?>">
 							<p>Tahun</p>
 						</a>
 					</li>

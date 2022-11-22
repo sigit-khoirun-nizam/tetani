@@ -60,7 +60,7 @@
                                                             endif; ?>>Tidak Aktif</option>
                             </select>
                             <small class="text-danger">
-                                <?php echo form_error('Agama') ?>
+                                <?php echo form_error('status') ?>
                             </small>
                         </div>
 

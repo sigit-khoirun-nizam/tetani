@@ -36,6 +36,8 @@ class DataTransporter extends CI_Controller
         }
 
         $data["title"] = "Tambah data transporter";
+        $data['kode'] = $this->DataTransporter_model->kode();
+        
         $this->load->view('admin/head', ["menu"=>21]);
         $this->load->view('datatransporter/add', $data);
         $this->load->view('admin/foot');

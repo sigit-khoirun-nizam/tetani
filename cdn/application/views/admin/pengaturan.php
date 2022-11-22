@@ -22,10 +22,10 @@
 				<a href="javascript:void(0)" onclick="loadSettingBank(1);$('.tambuser').hide();$('.tambank').show();$('.tambwas').hide();" class="tabs-item">
 					<i class="fas fa-money-check-alt"></i> Rekening
 				</a>
-				<?php if($_SESSION["level"] == 2){ ?>
-				<a href="javascript:void(0)" onclick="loadUser(1);$('.tambuser').show();$('.tambwas').hide();$('.tambank').hide();" class="tabs-item">
-					<i class="fas fa-users-cog"></i> Pengguna
-				</a>
+				<?php if ($_SESSION["level"] == 2) { ?>
+					<a href="javascript:void(0)" onclick="loadUser(1);$('.tambuser').show();$('.tambwas').hide();$('.tambank').hide();" class="tabs-item">
+						<i class="fas fa-users-cog"></i> Pengguna
+					</a>
 				<?php } ?>
 			</div>
 			<div class="col-md-2 tambank" style="display:none;">
@@ -45,15 +45,15 @@
 </div>
 
 <script type="text/javascript">
-	$(function(){
+	$(function() {
 		loadSettingUmum();
-		
-		$(".tabs-item").on('click',function(){
+
+		$(".tabs-item").on('click', function() {
 			$(".tabs-item.active").removeClass("active");
 			$(this).addClass("active");
 		});
-		
-		$("#wasapform").on("submit",function(e){
+
+		$("#wasapform").on("submit", function(e) {
 			e.preventDefault();
 			swal.fire({
 				text: "pastikan lagi data yang anda masukkan sudah sesuai",
@@ -61,26 +61,26 @@
 				type: "warning",
 				showCancelButton: true,
 				cancelButtonText: "Cek Lagi"
-			}).then((vals)=>{
-				if(vals.value){
+			}).then((vals) => {
+				if (vals.value) {
 					var datar = $("#wasapform").serialize();
 					datar = datar + "&" + $("#names").val() + "=" + $("#tokens").val();
-					$.post("<?=site_url("api/tambahwasap")?>",datar,function(msg){
-						var data = eval("("+msg+")");
+					$.post("<?= site_url("api/tambahwasap") ?>", datar, function(msg) {
+						var data = eval("(" + msg + ")");
 						updateToken(data.token);
-						if(data.success == true){
+						if (data.success == true) {
 							loadWasap(1);
 							$("#modalwasap").modal("hide");
-							swal.fire("Berhasil","data sudah disimpan","success");
-						}else{
-							swal.fire("Gagal!","gagal menyimpan data, coba ulangi beberapa saat lagi","error");
+							swal.fire("Berhasil", "data sudah disimpan", "success");
+						} else {
+							swal.fire("Gagal!", "gagal menyimpan data, coba ulangi beberapa saat lagi", "error");
 						}
 					});
 				}
 			});
 		});
-		
-		$("#rekeningform").on("submit",function(e){
+
+		$("#rekeningform").on("submit", function(e) {
 			e.preventDefault();
 			swal.fire({
 				text: "pastikan lagi data yang anda masukkan sudah sesuai",
@@ -88,28 +88,28 @@
 				type: "warning",
 				showCancelButton: true,
 				cancelButtonText: "Cek Lagi"
-			}).then((vals)=>{
-				if(vals.value){
+			}).then((vals) => {
+				if (vals.value) {
 					var datar = $("#rekeningform").serialize();
 					datar = datar + "&" + $("#names").val() + "=" + $("#tokens").val();
-					$.post("<?=site_url("api/tambahrekening")?>",datar,function(msg){
-						var data = eval("("+msg+")");
+					$.post("<?= site_url("api/tambahrekening") ?>", datar, function(msg) {
+						var data = eval("(" + msg + ")");
 						updateToken(data.token);
-						if(data.success == true){
+						if (data.success == true) {
 							loadSettingBank(1);
 							$("#modal").modal("hide");
-							swal.fire("Berhasil","data rekening sudah disimpan","success");
-						}else{
-							swal.fire("Gagal!","gagal menyimpan data, coba ulangi beberapa saat lagi","error");
+							swal.fire("Berhasil", "data rekening sudah disimpan", "success");
+						} else {
+							swal.fire("Gagal!", "gagal menyimpan data, coba ulangi beberapa saat lagi", "error");
 						}
 					});
 				}
 			});
 		});
-		
-		<?php 
-			if($this->func->demo() != true){
-				echo '
+
+		<?php
+		if ($this->func->demo() != true) {
+			echo '
 				$("#userform").on("submit",function(e){
 					e.preventDefault();
 					swal.fire({
@@ -122,7 +122,7 @@
 						if(vals.value){
 							var datar = $("#userform").serialize();
 							datar = datar + "&" + $("#names").val() + "=" + $("#tokens").val();
-							$.post("'.site_url("api/tambahuser").'",datar,function(msg){
+							$.post("' . site_url("api/tambahuser") . '",datar,function(msg){
 								var data = eval("("+msg+")");
 								updateToken(data.token);
 								if(data.success == true){
@@ -136,78 +136,94 @@
 						}
 					});
 				});';
-			}
+		}
 		?>
 	});
-	
-	function loadSettingBank(page){
+
+	function loadSettingBank(page) {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url("api/rekening?load=setting&page=")?>"+page);
+		$("#load").load("<?= site_url("api/rekening?load=setting&page=") ?>" + page);
 	}
-	function loadWasap(page){
+
+	function loadWasap(page) {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url("api/wasap?load=wasap&page=")?>"+page);
+		$("#load").load("<?= site_url("api/wasap?load=wasap&page=") ?>" + page);
 	}
-	function loadSettingUmum(){
+
+	function loadSettingUmum() {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url('api/setting')?>");
+		$("#load").load("<?= site_url('api/setting') ?>");
 	}
-	function loadSettingKurir(){
+
+	function loadSettingKurir() {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url('api/settingkurir')?>");
+		$("#load").load("<?= site_url('api/settingkurir') ?>");
 	}
-	function loadSettingServer(){
+
+	function loadSettingServer() {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url('api/settingserver')?>");
+		$("#load").load("<?= site_url('api/settingserver') ?>");
 	}
-	function loadSettingPayment(){
+
+	function loadSettingPayment() {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$("#load").load("<?=site_url('api/settingpayment')?>");
+		$("#load").load("<?= site_url('api/settingpayment') ?>");
 	}
-	function loadUser(page){
+
+	function loadUser(page) {
 		$("#load").html('<i class="fas fa-spin fa-spinner"></i> Loading data...');
-		$.post("<?=site_url('api/usermanajer')?>?page="+page,{[$("#names").val()]:$("#tokens").val()},function(ev){
-			var data = eval("("+ev+")");
+		$.post("<?= site_url('api/usermanajer') ?>?page=" + page, {
+			[$("#names").val()]: $("#tokens").val()
+		}, function(ev) {
+			var data = eval("(" + ev + ")");
 			updateToken(data.token);
 			$("#load").html(data.result);
 		});
 	}
-	function editWasap(id){
-		$.post("<?=site_url('api/wasap')?>",{"formid":id,[$("#names").val()]:$("#tokens").val()},function(ev){
-			var data = eval("("+ev+")");
+
+	function editWasap(id) {
+		$.post("<?= site_url('api/wasap') ?>", {
+			"formid": id,
+			[$("#names").val()]: $("#tokens").val()
+		}, function(ev) {
+			var data = eval("(" + ev + ")");
 			updateToken(data.token);
 			$("#wasid").val(id);
 			$("#wasnama").val(data.nama);
 			$("#waswasap").val(data.wasap);
-			
+
 			$("#modalwasap").modal();
 		});
 	}
-	function edit(id){
-		$.post("<?=site_url('api/rekening')?>",{"formid":id,[$("#names").val()]:$("#tokens").val()},function(ev){
-			var data = eval("("+ev+")");
+
+	function edit(id) {
+		$.post("<?= site_url('api/rekening') ?>", {
+			"formid": id,
+			[$("#names").val()]: $("#tokens").val()
+		}, function(ev) {
+			var data = eval("(" + ev + ")");
 			updateToken(data.token);
 			$("#rekid").val(id);
 			$("#reknama").val(data.atasnama);
 			$("#reknorek").val(data.norek);
 			$("#rekkcp").val(data.kcp);
-			
-			$("#rekbank option").each(function(){
-				if($(this).val() == data.idbank){
-					$(this).prop("selected",true);
-				}else{
-					$(this).prop("selected",false);
+
+			$("#rekbank option").each(function() {
+				if ($(this).val() == data.idbank) {
+					$(this).prop("selected", true);
+				} else {
+					$(this).prop("selected", false);
 				}
 			});
-			
+
 			$("#modal").modal();
 		});
 	}
 	<?php
-		if($this->func->demo() != true){
-			echo '
+	if ($this->func->demo() != true) {
+		echo '
 			function editUser(id){
-				$.post("'.site_url('api/usermanajer').'",{"formid":id,[$("#names").val()]:$("#tokens").val()},function(ev){
+				$.post("' . site_url('api/usermanajer') . '",{"formid":id,[$("#names").val()]:$("#tokens").val()},function(ev){
 					var data = eval("("+ev+")");
 					updateToken(data.token);
 					$("#usrid").val(id);
@@ -236,7 +252,7 @@
 					cancelButtonText: "Batal"
 				}).then((vals)=>{
 					if(vals.value){
-						$.post("'.site_url("api/hapususer").'",{"id":id,[$("#names").val()]:$("#tokens").val()},function(msg){
+						$.post("' . site_url("api/hapususer") . '",{"id":id,[$("#names").val()]:$("#tokens").val()},function(msg){
 							var data = eval("("+msg+")");
 							updateToken(data.token);
 							if(data.success == true){
@@ -249,32 +265,36 @@
 					}
 				});
 			}';
-		}
+	}
 	?>
-	function tambahUser(){
+
+	function tambahUser() {
 		<?php
-			if($this->func->demo() != true){
-				echo "
+		if ($this->func->demo() != true) {
+			echo "
 				$('#userform')[0].reset();
 				$('#usrid').val(0);";
-			}
+		}
 		?>
-		
+
 		$("#modaluser").modal();
 	}
-	function tambahRekening(){
+
+	function tambahRekening() {
 		$('#rekeningform')[0].reset();
 		$('#rekid').val(0);
-		
+
 		$("#modal").modal();
 	}
-	function tambahWasap(){
+
+	function tambahWasap() {
 		$('#wasapform')[0].reset();
 		$('#wasid').val(0);
-		
+
 		$("#modalwasap").modal();
 	}
-	function hapus(id){
+
+	function hapus(id) {
 		swal.fire({
 			text: "data yang sudah dihapus tidak dapat dikembalikan lagi",
 			title: "Yakin menghapus data ini?",
@@ -282,22 +302,26 @@
 			showCancelButton: true,
 			cancelButtonColor: "#ff646d",
 			cancelButtonText: "Batal"
-		}).then((vals)=>{
-			if(vals.value){
-				$.post("<?=site_url("api/hapusrekening")?>",{"id":id,[$("#names").val()]:$("#tokens").val()},function(msg){
-					var data = eval("("+msg+")");
+		}).then((vals) => {
+			if (vals.value) {
+				$.post("<?= site_url("api/hapusrekening") ?>", {
+					"id": id,
+					[$("#names").val()]: $("#tokens").val()
+				}, function(msg) {
+					var data = eval("(" + msg + ")");
 					updateToken(data.token);
-					if(data.success == true){
+					if (data.success == true) {
 						loadSettingBank(1);
-						swal.fire("Berhasil","data sudah dihapus","success");
-					}else{
-						swal.fire("Gagal!","gagal menghapus data, coba ulangi beberapa saat lagi","error");
+						swal.fire("Berhasil", "data sudah dihapus", "success");
+					} else {
+						swal.fire("Gagal!", "gagal menghapus data, coba ulangi beberapa saat lagi", "error");
 					}
 				});
 			}
 		});
 	}
-	function hapusWasap(id){
+
+	function hapusWasap(id) {
 		swal.fire({
 			text: "data yang sudah dihapus tidak dapat dikembalikan lagi",
 			title: "Yakin menghapus data ini?",
@@ -305,16 +329,19 @@
 			showCancelButton: true,
 			cancelButtonColor: "#ff646d",
 			cancelButtonText: "Batal"
-		}).then((vals)=>{
-			if(vals.value){
-				$.post("<?=site_url("api/hapuswasap")?>",{"id":id,[$("#names").val()]:$("#tokens").val()},function(msg){
-					var data = eval("("+msg+")");
+		}).then((vals) => {
+			if (vals.value) {
+				$.post("<?= site_url("api/hapuswasap") ?>", {
+					"id": id,
+					[$("#names").val()]: $("#tokens").val()
+				}, function(msg) {
+					var data = eval("(" + msg + ")");
 					updateToken(data.token);
-					if(data.success == true){
+					if (data.success == true) {
 						loadUser(1);
-						swal.fire("Berhasil","data sudah dihapus","success");
-					}else{
-						swal.fire("Gagal!","gagal menghapus data, coba ulangi beberapa saat lagi","error");
+						swal.fire("Berhasil", "data sudah dihapus", "success");
+					} else {
+						swal.fire("Gagal!", "gagal menghapus data, coba ulangi beberapa saat lagi", "error");
 					}
 				});
 			}
@@ -336,14 +363,14 @@
 					<input type="hidden" name="id" id="rekid" value="0" />
 					<div class="form-group">
 						<label>Bank</label>
-						<select id="rekbank" name="idbank" class="form-control" required >
+						<select id="rekbank" name="idbank" class="form-control" required>
 							<option value="">- Pilih Bank -</option>
 							<?php
-								$this->db->order_by("nama");
-								$db = $this->db->get("rekeningbank");
-								foreach($db->result() as $r){
-									echo "<option value='".$r->id."'>".$r->nama."</option>";
-								}
+							$this->db->order_by("nama");
+							$db = $this->db->get("rekeningbank");
+							foreach ($db->result() as $r) {
+								echo "<option value='" . $r->id . "'>" . $r->nama . "</option>";
+							}
 							?>
 						</select>
 					</div>
@@ -361,7 +388,7 @@
 					</div>
 					<div class="form-group m-tb-10">
 						<button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Simpan</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="fas fa-times"></i> Batal</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Batal</button>
 					</div>
 				</form>
 			</div>
@@ -380,10 +407,10 @@
 			</div>
 			<div class="modal-body">
 				<?php
-					if($this->func->demo() == true){
-						echo 'maaf, fitur tidak terseida untuk mode demo aplikasi';
-					}else{
-						echo '
+				if ($this->func->demo() == true) {
+					echo 'maaf, fitur tidak terseida untuk mode demo aplikasi';
+				} else {
+					echo '
 						<form id="userform">
 							<input type="hidden" name="id" id="usrid" value="0" />
 							<div class="form-group">
@@ -406,12 +433,16 @@
 									<option value="2">Owner</option>
 								</select>
 							</div>
+							<div class="form-group">
+								<label>Perusahaan</label>
+								<input type="text" id="perusahaan" name="perusahaan" class="form-control" required />
+							</div>
 							<div class="form-group m-tb-10">
 								<button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Simpan</button>
 								<button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="fas fa-times"></i> Batal</button>
 							</div>
 						</form>';
-					}
+				}
 				?>
 			</div>
 		</div>
@@ -440,7 +471,7 @@
 					</div>
 					<div class="form-group m-tb-10">
 						<button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Simpan</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="fas fa-times"></i> Batal</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Batal</button>
 					</div>
 				</form>
 			</div>
