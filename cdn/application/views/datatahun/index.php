@@ -19,7 +19,7 @@
                 <div mb-5>
                     <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
                     <?php if ($this->session->flashdata('message')) :
-                        echo $this->session->flashdata('message',);
+                        echo $this->session->flashdata('message');
                     endif; ?>
                 </div>
                 <div class="card">

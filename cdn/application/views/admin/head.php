@@ -167,18 +167,19 @@
 					</li>
 
 					<li class="nav-item">
+					<li class="nav-item <?php echo (isset($menu) and $menu == 50) ? "active" : "" ?>">
 						<a data-toggle="collapse" href="#perusahaan" aria-expanded="true">
 							<span>Perusahaan</span>
 						</a>
 						<div class="collapse" id="perusahaan">
 							<ul class="">
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("perusahaan") ?>">
 										<span class="">Data Perusahaan</span>
 									</a>
 								</li>
 								<li>
-									<a href="<?= site_url("ngadimin") ?>">
+									<a href="<?= site_url("karyawan") ?>">
 										<span class="">Karyawan</span>
 									</a>
 								</li>

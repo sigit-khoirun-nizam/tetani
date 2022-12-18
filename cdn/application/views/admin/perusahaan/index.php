@@ -14,8 +14,8 @@
 			<div class="container-fluid">
 
 				<!-- DataTables -->
-				<a href="<?= base_url('pabrik/add'); ?>" class="btn btn-primary float-right"><i class="fas fa-plus-circle"></i> Tambah Pabrik</a>
-				<h4 class="page-title">PABRIK</h4>
+				<a href="<?= base_url('perusahaan/add'); ?>" class="btn btn-primary float-right"><i class="fas fa-plus-circle"></i> Tambah Data</a>
+				<h4 class="page-title">Perusahaan</h4>
 					<div mb-5>
 		                <!-- Menampilkan flashh data (pesan saat data berhasil disimpan)-->
 		                <?php if ($this->session->flashdata('message')) :
@@ -29,30 +29,29 @@
 							<table class="table table-hover mt-3" id="tableData" width="100%" cellspacing="0">
 								<thead>
 									<tr align="center">
-										<th>Kode Pabrik</th>
 										<th>Nama</th>
-										<th>Tipe Penyedia</th>  
-										<th>No HP</th>
+										<th>Brand</th>
 										<th>Kota</th>
-										<th>Kategori</th>
-										<th>Status</th>
+										<th>Account Bank</th>
+										<th>Logo Brand</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
 
-									<?php foreach ($data_pabrik as $row) : ?>
+									<?php foreach ($data_perusahaan as $row) : ?>
 	                                    <tr align="center">
-	                                    	<td><?= $row->kode_pabrik ?></td>
-	                                        <td><?= $row->nama_pabrik ?></td>
-	                                        <td><?= $row->tipe_penyedia ?></td>
-	                                        <td><?= $row->no_hp ?></td>
+	                                    	<td><?= $row->nama_perusahaan ?></td>
+	                                        <td><?= $row->brand_perusahaan ?></td>
 	                                        <td><?= $row->kota ?></td>
-	                                        <td><?= $row->kategori_produk ?></td>
-	                                        <td><?= $row->status ?></td>
+	                                        <td><?= $row->nama_rekening ?></td>
+	                                        
+	                                        <td><img src="<?base_url().'assets/images/'.$logo=$row->$logo; ?>" style="width:90px;"></td>
+
+	                                        
 	                                        <td>
-	                                            <a href="<?= site_url('pabrik/edit/' . $row->id_pabrik) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-	                                            <a href="javascript:void(0);" data="<?= $row->id_pabrik ?>" class="item-delete btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+	                                            <a href="<?= site_url('perusahaan/edit/' . $row->id_perusahaan) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+	                                            <a href="javascript:void(0);" data="<?= $row->id_perusahaan ?>" class="item-delete btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 	                                    </tr>
 	                                <?php endforeach; ?>
 
@@ -85,7 +84,7 @@
 	                </button>
 	            </div>
 	            <div class="modal-body">
-	                Anda ingin menghapus data pabrik ini?
+	                Anda ingin menghapus data Perusahaan ini?
 	            </div>
 	            <div class="modal-footer">
 	                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -113,15 +112,15 @@
         var id = $(this).attr('data');
         $('#myModalDelete').modal('show');
         //ketika tombol lanjutkan ditekan, data id akan dikirim ke method delete 
-        //pada controller mahasiswa
+        //pada controller 
         $('#btdelete').unbind().click(function() {
             $.ajax({
                 type: 'ajax',
                 method: 'get',
                 async: false,
-                url: '<?php echo base_url() ?>pabrik/delete',
+                url: '<?php echo base_url() ?>perusahaan/delete',
                 data: {
-                    id_pabrik: id
+                    id_perusahaan: id
                 },
                 dataType: 'json',
                 success: function(response) {

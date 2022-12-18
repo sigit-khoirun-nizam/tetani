@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Nov 2022 pada 12.19
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.27
+-- Generation Time: Dec 18, 2022 at 07:19 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_admin`
+-- Table structure for table `blw_admin`
 --
 
 CREATE TABLE `blw_admin` (
@@ -36,7 +36,7 @@ CREATE TABLE `blw_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_admin`
+-- Dumping data for table `blw_admin`
 --
 
 INSERT INTO `blw_admin` (`id`, `nama`, `level`, `username`, `password`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `blw_admin` (`id`, `nama`, `level`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_afiliasi`
+-- Table structure for table `blw_afiliasi`
 --
 
 CREATE TABLE `blw_afiliasi` (
@@ -68,7 +68,7 @@ CREATE TABLE `blw_afiliasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_afiliasi`
+-- Dumping data for table `blw_afiliasi`
 --
 
 INSERT INTO `blw_afiliasi` (`id_afiliasi`, `kode_afiliasi`, `nama_afiliasi`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
@@ -78,7 +78,7 @@ INSERT INTO `blw_afiliasi` (`id_afiliasi`, `kode_afiliasi`, `nama_afiliasi`, `ti
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_alamat`
+-- Table structure for table `blw_alamat`
 --
 
 CREATE TABLE `blw_alamat` (
@@ -96,7 +96,7 @@ CREATE TABLE `blw_alamat` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_blog`
+-- Table structure for table `blw_blog`
 --
 
 CREATE TABLE `blw_blog` (
@@ -112,7 +112,7 @@ CREATE TABLE `blw_blog` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_booster`
+-- Table structure for table `blw_booster`
 --
 
 CREATE TABLE `blw_booster` (
@@ -125,7 +125,7 @@ CREATE TABLE `blw_booster` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_driver_transporter`
+-- Table structure for table `blw_driver_transporter`
 --
 
 CREATE TABLE `blw_driver_transporter` (
@@ -138,7 +138,7 @@ CREATE TABLE `blw_driver_transporter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_driver_transporter`
+-- Dumping data for table `blw_driver_transporter`
 --
 
 INSERT INTO `blw_driver_transporter` (`id`, `kode_driver`, `nama_driver`, `nama_transporter`, `no_hp`, `status`) VALUES
@@ -147,7 +147,7 @@ INSERT INTO `blw_driver_transporter` (`id`, `kode_driver`, `nama_driver`, `nama_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_d_transporter`
+-- Table structure for table `blw_d_transporter`
 --
 
 CREATE TABLE `blw_d_transporter` (
@@ -165,7 +165,7 @@ CREATE TABLE `blw_d_transporter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_d_transporter`
+-- Dumping data for table `blw_d_transporter`
 --
 
 INSERT INTO `blw_d_transporter` (`id`, `kode_transporter`, `nama`, `no_hp`, `email`, `alamat`, `provinsi`, `kota`, `status`, `account_bank`, `rekening_bank`) VALUES
@@ -176,7 +176,7 @@ INSERT INTO `blw_d_transporter` (`id`, `kode_transporter`, `nama`, `no_hp`, `ema
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_grosir`
+-- Table structure for table `blw_grosir`
 --
 
 CREATE TABLE `blw_grosir` (
@@ -196,7 +196,7 @@ CREATE TABLE `blw_grosir` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_grosir`
+-- Dumping data for table `blw_grosir`
 --
 
 INSERT INTO `blw_grosir` (`id_grosir`, `kode_grosir`, `nama_grosir`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
@@ -205,7 +205,7 @@ INSERT INTO `blw_grosir` (`id_grosir`, `kode_grosir`, `nama_grosir`, `tipe_penye
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_gudang`
+-- Table structure for table `blw_gudang`
 --
 
 CREATE TABLE `blw_gudang` (
@@ -221,7 +221,7 @@ CREATE TABLE `blw_gudang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_historyongkir`
+-- Table structure for table `blw_historyongkir`
 --
 
 CREATE TABLE `blw_historyongkir` (
@@ -239,7 +239,7 @@ CREATE TABLE `blw_historyongkir` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_historystok`
+-- Table structure for table `blw_historystok`
 --
 
 CREATE TABLE `blw_historystok` (
@@ -256,7 +256,7 @@ CREATE TABLE `blw_historystok` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_historyviews`
+-- Table structure for table `blw_historyviews`
 --
 
 CREATE TABLE `blw_historyviews` (
@@ -270,7 +270,7 @@ CREATE TABLE `blw_historyviews` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_kab`
+-- Table structure for table `blw_kab`
 --
 
 CREATE TABLE `blw_kab` (
@@ -283,7 +283,7 @@ CREATE TABLE `blw_kab` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data untuk tabel `blw_kab`
+-- Dumping data for table `blw_kab`
 --
 
 INSERT INTO `blw_kab` (`id`, `idprov`, `tipe`, `nama`, `rajaongkir`, `kodepos`) VALUES
@@ -792,7 +792,31 @@ INSERT INTO `blw_kab` (`id`, `idprov`, `tipe`, `nama`, `rajaongkir`, `kodepos`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_kategori`
+-- Table structure for table `blw_karyawan`
+--
+
+CREATE TABLE `blw_karyawan` (
+  `id_karyawan` int(11) NOT NULL,
+  `kode_karyawan` varchar(255) DEFAULT NULL,
+  `nama_karyawan` varchar(225) NOT NULL,
+  `nama_perusahaan` varchar(225) NOT NULL,
+  `jabatan` varchar(225) NOT NULL,
+  `no_hp` varchar(225) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `status` enum('Aktif','Tidak Aktif') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blw_karyawan`
+--
+
+INSERT INTO `blw_karyawan` (`id_karyawan`, `kode_karyawan`, `nama_karyawan`, `nama_perusahaan`, `jabatan`, `no_hp`, `email`, `status`) VALUES
+(3, '001', 'gian', 'pt telkom', 'hrd', '086277281162', 'gian@gamail.com', 'Aktif');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blw_kategori`
 --
 
 CREATE TABLE `blw_kategori` (
@@ -804,7 +828,7 @@ CREATE TABLE `blw_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_kategori`
+-- Dumping data for table `blw_kategori`
 --
 
 INSERT INTO `blw_kategori` (`id`, `parent`, `url`, `nama`, `icon`) VALUES
@@ -820,7 +844,7 @@ INSERT INTO `blw_kategori` (`id`, `parent`, `url`, `nama`, `icon`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_kec`
+-- Table structure for table `blw_kec`
 --
 
 CREATE TABLE `blw_kec` (
@@ -832,7 +856,7 @@ CREATE TABLE `blw_kec` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data untuk tabel `blw_kec`
+-- Dumping data for table `blw_kec`
 --
 
 INSERT INTO `blw_kec` (`id`, `idkab`, `nama`, `rajaongkir`, `kodepos`) VALUES
@@ -7838,7 +7862,7 @@ INSERT INTO `blw_kec` (`id`, `idkab`, `nama`, `rajaongkir`, `kodepos`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_kemitraan`
+-- Table structure for table `blw_kemitraan`
 --
 
 CREATE TABLE `blw_kemitraan` (
@@ -7855,17 +7879,16 @@ CREATE TABLE `blw_kemitraan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_kemitraan`
+-- Dumping data for table `blw_kemitraan`
 --
 
 INSERT INTO `blw_kemitraan` (`id_kemitraan`, `kode_kemitraan`, `nama_kemitraan`, `kategori_produk`, `no_hp`, `kota`, `provinsi`, `nama_rekening`, `no_rekening`, `status`) VALUES
-(1, '000001', 'nura', 'buah', '082341779514', 'Bojonegoro', 'Jawa Timur', 'nur', '32415617', 'Aktif'),
-(3, '000002', 'fia', 'buku galau', '9292002020', 'malang', 'jawa timur', 'gdgd', '773829276', 'Aktif');
+(1, '000001', 'nura', 'buah', '082341123453', 'Bojonegoro', 'Jawa Timur', 'nur', '32415617', 'Aktif');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_konfirmasi`
+-- Table structure for table `blw_konfirmasi`
 --
 
 CREATE TABLE `blw_konfirmasi` (
@@ -7878,7 +7901,7 @@ CREATE TABLE `blw_konfirmasi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_kurir`
+-- Table structure for table `blw_kurir`
 --
 
 CREATE TABLE `blw_kurir` (
@@ -7891,7 +7914,7 @@ CREATE TABLE `blw_kurir` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_kurir`
+-- Dumping data for table `blw_kurir`
 --
 
 INSERT INTO `blw_kurir` (`id`, `nama`, `rajaongkir`, `namalengkap`, `keterangan`, `halaman`) VALUES
@@ -7911,7 +7934,7 @@ INSERT INTO `blw_kurir` (`id`, `nama`, `rajaongkir`, `namalengkap`, `keterangan`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_mutasi`
+-- Table structure for table `blw_mutasi`
 --
 
 CREATE TABLE `blw_mutasi` (
@@ -7926,7 +7949,7 @@ CREATE TABLE `blw_mutasi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_notifikasi`
+-- Table structure for table `blw_notifikasi`
 --
 
 CREATE TABLE `blw_notifikasi` (
@@ -7946,7 +7969,7 @@ CREATE TABLE `blw_notifikasi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_otpdaftar`
+-- Table structure for table `blw_otpdaftar`
 --
 
 CREATE TABLE `blw_otpdaftar` (
@@ -7962,7 +7985,7 @@ CREATE TABLE `blw_otpdaftar` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_otplogin`
+-- Table structure for table `blw_otplogin`
 --
 
 CREATE TABLE `blw_otplogin` (
@@ -7978,7 +8001,7 @@ CREATE TABLE `blw_otplogin` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_pabrik`
+-- Table structure for table `blw_pabrik`
 --
 
 CREATE TABLE `blw_pabrik` (
@@ -7998,7 +8021,7 @@ CREATE TABLE `blw_pabrik` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_pabrik`
+-- Dumping data for table `blw_pabrik`
 --
 
 INSERT INTO `blw_pabrik` (`id_pabrik`, `kode_pabrik`, `nama_pabrik`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
@@ -8007,7 +8030,7 @@ INSERT INTO `blw_pabrik` (`id_pabrik`, `kode_pabrik`, `nama_pabrik`, `tipe_penye
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_page`
+-- Table structure for table `blw_page`
 --
 
 CREATE TABLE `blw_page` (
@@ -8021,7 +8044,7 @@ CREATE TABLE `blw_page` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data untuk tabel `blw_page`
+-- Dumping data for table `blw_page`
 --
 
 INSERT INTO `blw_page` (`id`, `tgl`, `usrid`, `nama`, `slug`, `konten`, `status`) VALUES
@@ -8031,7 +8054,7 @@ INSERT INTO `blw_page` (`id`, `tgl`, `usrid`, `nama`, `slug`, `konten`, `status`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_paket`
+-- Table structure for table `blw_paket`
 --
 
 CREATE TABLE `blw_paket` (
@@ -8043,7 +8066,7 @@ CREATE TABLE `blw_paket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_paket`
+-- Dumping data for table `blw_paket`
 --
 
 INSERT INTO `blw_paket` (`id`, `nama`, `rajaongkir`, `idkurir`, `keterangan`) VALUES
@@ -8074,7 +8097,7 @@ INSERT INTO `blw_paket` (`id`, `nama`, `rajaongkir`, `idkurir`, `keterangan`) VA
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_pembayaran`
+-- Table structure for table `blw_pembayaran`
 --
 
 CREATE TABLE `blw_pembayaran` (
@@ -8106,7 +8129,37 @@ CREATE TABLE `blw_pembayaran` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_pesan`
+-- Table structure for table `blw_perusahaan`
+--
+
+CREATE TABLE `blw_perusahaan` (
+  `id_perusahaan` int(11) NOT NULL,
+  `nama_perusahaan` varchar(255) NOT NULL,
+  `brand_perusahaan` varchar(225) NOT NULL,
+  `no_hp` varchar(225) NOT NULL,
+  `email` varchar(225) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `kota` varchar(225) NOT NULL,
+  `provinsi` varchar(225) NOT NULL,
+  `nama_rekening` varchar(225) NOT NULL,
+  `no_rekening` varchar(225) NOT NULL,
+  `website` varchar(225) NOT NULL,
+  `npwp` varchar(225) NOT NULL,
+  `logo` varchar(225) NOT NULL,
+  `code` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blw_perusahaan`
+--
+
+INSERT INTO `blw_perusahaan` (`id_perusahaan`, `nama_perusahaan`, `brand_perusahaan`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `nama_rekening`, `no_rekening`, `website`, `npwp`, `logo`, `code`) VALUES
+(8, 'fifa', 'fifacomunity', '948484746784', 'fifa@gmail.com', 'Malang', 'malang', 'Jawa Timur', 'oke', 'oke', 'fifa', 'u8r9949', '101618_HT_dandelion_feat.jpg', 'fhfjj');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blw_pesan`
 --
 
 CREATE TABLE `blw_pesan` (
@@ -8121,7 +8174,7 @@ CREATE TABLE `blw_pesan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_petani`
+-- Table structure for table `blw_petani`
 --
 
 CREATE TABLE `blw_petani` (
@@ -8141,7 +8194,7 @@ CREATE TABLE `blw_petani` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_petani`
+-- Dumping data for table `blw_petani`
 --
 
 INSERT INTO `blw_petani` (`id_petani`, `kode_petani`, `nama_petani`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
@@ -8154,7 +8207,7 @@ INSERT INTO `blw_petani` (`id_petani`, `kode_petani`, `nama_petani`, `tipe_penye
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_preorder`
+-- Table structure for table `blw_preorder`
 --
 
 CREATE TABLE `blw_preorder` (
@@ -8178,7 +8231,7 @@ CREATE TABLE `blw_preorder` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_produk`
+-- Table structure for table `blw_produk`
 --
 
 CREATE TABLE `blw_produk` (
@@ -8209,7 +8262,7 @@ CREATE TABLE `blw_produk` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_produkvariasi`
+-- Table structure for table `blw_produkvariasi`
 --
 
 CREATE TABLE `blw_produkvariasi` (
@@ -8231,7 +8284,7 @@ CREATE TABLE `blw_produkvariasi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_produk_petani`
+-- Table structure for table `blw_produk_petani`
 --
 
 CREATE TABLE `blw_produk_petani` (
@@ -8240,7 +8293,7 @@ CREATE TABLE `blw_produk_petani` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_produk_petani`
+-- Dumping data for table `blw_produk_petani`
 --
 
 INSERT INTO `blw_produk_petani` (`id_produk`, `nama_produk`) VALUES
@@ -8252,7 +8305,7 @@ INSERT INTO `blw_produk_petani` (`id_produk`, `nama_produk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_profil`
+-- Table structure for table `blw_profil`
 --
 
 CREATE TABLE `blw_profil` (
@@ -8268,7 +8321,7 @@ CREATE TABLE `blw_profil` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_promo`
+-- Table structure for table `blw_promo`
 --
 
 CREATE TABLE `blw_promo` (
@@ -8284,7 +8337,7 @@ CREATE TABLE `blw_promo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_promo`
+-- Dumping data for table `blw_promo`
 --
 
 INSERT INTO `blw_promo` (`id`, `usrid`, `tgl`, `jenis`, `status`, `caption`, `gambar`, `link`, `tgl_selesai`) VALUES
@@ -8297,7 +8350,7 @@ INSERT INTO `blw_promo` (`id`, `usrid`, `tgl`, `jenis`, `status`, `caption`, `ga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_prov`
+-- Table structure for table `blw_prov`
 --
 
 CREATE TABLE `blw_prov` (
@@ -8307,7 +8360,7 @@ CREATE TABLE `blw_prov` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data untuk tabel `blw_prov`
+-- Dumping data for table `blw_prov`
 --
 
 INSERT INTO `blw_prov` (`id`, `nama`, `rajaongkir`) VALUES
@@ -8349,7 +8402,7 @@ INSERT INTO `blw_prov` (`id`, `nama`, `rajaongkir`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_rekening`
+-- Table structure for table `blw_rekening`
 --
 
 CREATE TABLE `blw_rekening` (
@@ -8369,7 +8422,7 @@ CREATE TABLE `blw_rekening` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_rekeningbank`
+-- Table structure for table `blw_rekeningbank`
 --
 
 CREATE TABLE `blw_rekeningbank` (
@@ -8380,7 +8433,7 @@ CREATE TABLE `blw_rekeningbank` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_rekeningbank`
+-- Dumping data for table `blw_rekeningbank`
 --
 
 INSERT INTO `blw_rekeningbank` (`id`, `nama`, `logo`, `kodebank`) VALUES
@@ -8528,7 +8581,7 @@ INSERT INTO `blw_rekeningbank` (`id`, `nama`, `logo`, `kodebank`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_retail`
+-- Table structure for table `blw_retail`
 --
 
 CREATE TABLE `blw_retail` (
@@ -8548,7 +8601,7 @@ CREATE TABLE `blw_retail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blw_retail`
+-- Dumping data for table `blw_retail`
 --
 
 INSERT INTO `blw_retail` (`id_retail`, `kode_retail`, `nama_retail`, `tipe_penyedia`, `no_hp`, `email`, `alamat`, `kota`, `provinsi`, `kategori_produk`, `status`, `nama_bank`, `rekening_bank`) VALUES
@@ -8557,7 +8610,7 @@ INSERT INTO `blw_retail` (`id_retail`, `kode_retail`, `nama_retail`, `tipe_penye
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_review`
+-- Table structure for table `blw_review`
 --
 
 CREATE TABLE `blw_review` (
@@ -8573,7 +8626,7 @@ CREATE TABLE `blw_review` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_saldo`
+-- Table structure for table `blw_saldo`
 --
 
 CREATE TABLE `blw_saldo` (
@@ -8586,7 +8639,7 @@ CREATE TABLE `blw_saldo` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_saldodarike`
+-- Table structure for table `blw_saldodarike`
 --
 
 CREATE TABLE `blw_saldodarike` (
@@ -8598,7 +8651,7 @@ CREATE TABLE `blw_saldodarike` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_saldohistory`
+-- Table structure for table `blw_saldohistory`
 --
 
 CREATE TABLE `blw_saldohistory` (
@@ -8616,7 +8669,7 @@ CREATE TABLE `blw_saldohistory` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_saldotarik`
+-- Table structure for table `blw_saldotarik`
 --
 
 CREATE TABLE `blw_saldotarik` (
@@ -8643,7 +8696,7 @@ CREATE TABLE `blw_saldotarik` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_sessdrive`
+-- Table structure for table `blw_sessdrive`
 --
 
 CREATE TABLE `blw_sessdrive` (
@@ -8656,7 +8709,7 @@ CREATE TABLE `blw_sessdrive` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_setting`
+-- Table structure for table `blw_setting`
 --
 
 CREATE TABLE `blw_setting` (
@@ -8667,7 +8720,7 @@ CREATE TABLE `blw_setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Dumping data untuk tabel `blw_setting`
+-- Dumping data for table `blw_setting`
 --
 
 INSERT INTO `blw_setting` (`id`, `tgl`, `field`, `value`) VALUES
@@ -8719,7 +8772,7 @@ INSERT INTO `blw_setting` (`id`, `tgl`, `field`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_statuspesanan`
+-- Table structure for table `blw_statuspesanan`
 --
 
 CREATE TABLE `blw_statuspesanan` (
@@ -8734,7 +8787,26 @@ CREATE TABLE `blw_statuspesanan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_testimoni`
+-- Table structure for table `blw_tahun`
+--
+
+CREATE TABLE `blw_tahun` (
+  `id` int(11) NOT NULL,
+  `nama_tahun` varchar(100) NOT NULL,
+  `status_tahun` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blw_tahun`
+--
+
+INSERT INTO `blw_tahun` (`id`, `nama_tahun`, `status_tahun`) VALUES
+(1, '2001', 'Aktif');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blw_testimoni`
 --
 
 CREATE TABLE `blw_testimoni` (
@@ -8748,7 +8820,7 @@ CREATE TABLE `blw_testimoni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_testimoni`
+-- Dumping data for table `blw_testimoni`
 --
 
 INSERT INTO `blw_testimoni` (`id`, `tgl`, `status`, `nama`, `foto`, `komentar`, `jabatan`) VALUES
@@ -8762,7 +8834,7 @@ INSERT INTO `blw_testimoni` (`id`, `tgl`, `status`, `nama`, `foto`, `komentar`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_token`
+-- Table structure for table `blw_token`
 --
 
 CREATE TABLE `blw_token` (
@@ -8777,7 +8849,7 @@ CREATE TABLE `blw_token` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_transaksi`
+-- Table structure for table `blw_transaksi`
 --
 
 CREATE TABLE `blw_transaksi` (
@@ -8809,7 +8881,7 @@ CREATE TABLE `blw_transaksi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_transaksiproduk`
+-- Table structure for table `blw_transaksiproduk`
 --
 
 CREATE TABLE `blw_transaksiproduk` (
@@ -8829,7 +8901,7 @@ CREATE TABLE `blw_transaksiproduk` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_upload`
+-- Table structure for table `blw_upload`
 --
 
 CREATE TABLE `blw_upload` (
@@ -8843,7 +8915,7 @@ CREATE TABLE `blw_upload` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_userdata`
+-- Table structure for table `blw_userdata`
 --
 
 CREATE TABLE `blw_userdata` (
@@ -8860,7 +8932,7 @@ CREATE TABLE `blw_userdata` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_variasisize`
+-- Table structure for table `blw_variasisize`
 --
 
 CREATE TABLE `blw_variasisize` (
@@ -8873,7 +8945,7 @@ CREATE TABLE `blw_variasisize` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_variasiwarna`
+-- Table structure for table `blw_variasiwarna`
 --
 
 CREATE TABLE `blw_variasiwarna` (
@@ -8886,7 +8958,7 @@ CREATE TABLE `blw_variasiwarna` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_voucher`
+-- Table structure for table `blw_voucher`
 --
 
 CREATE TABLE `blw_voucher` (
@@ -8909,7 +8981,7 @@ CREATE TABLE `blw_voucher` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_wasap`
+-- Table structure for table `blw_wasap`
 --
 
 CREATE TABLE `blw_wasap` (
@@ -8920,7 +8992,7 @@ CREATE TABLE `blw_wasap` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `blw_wasap`
+-- Dumping data for table `blw_wasap`
 --
 
 INSERT INTO `blw_wasap` (`id`, `nama`, `wasap`, `tgl`) VALUES
@@ -8929,7 +9001,7 @@ INSERT INTO `blw_wasap` (`id`, `nama`, `wasap`, `tgl`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blw_wishlist`
+-- Table structure for table `blw_wishlist`
 --
 
 CREATE TABLE `blw_wishlist` (
@@ -8945,672 +9017,708 @@ CREATE TABLE `blw_wishlist` (
 --
 
 --
--- Indeks untuk tabel `blw_admin`
+-- Indexes for table `blw_admin`
 --
 ALTER TABLE `blw_admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_afiliasi`
+-- Indexes for table `blw_afiliasi`
 --
 ALTER TABLE `blw_afiliasi`
   ADD PRIMARY KEY (`id_afiliasi`);
 
 --
--- Indeks untuk tabel `blw_alamat`
+-- Indexes for table `blw_alamat`
 --
 ALTER TABLE `blw_alamat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_blog`
+-- Indexes for table `blw_blog`
 --
 ALTER TABLE `blw_blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_booster`
+-- Indexes for table `blw_booster`
 --
 ALTER TABLE `blw_booster`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_driver_transporter`
+-- Indexes for table `blw_driver_transporter`
 --
 ALTER TABLE `blw_driver_transporter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_d_transporter`
+-- Indexes for table `blw_d_transporter`
 --
 ALTER TABLE `blw_d_transporter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_grosir`
+-- Indexes for table `blw_grosir`
 --
 ALTER TABLE `blw_grosir`
   ADD PRIMARY KEY (`id_grosir`);
 
 --
--- Indeks untuk tabel `blw_historyongkir`
+-- Indexes for table `blw_historyongkir`
 --
 ALTER TABLE `blw_historyongkir`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_historystok`
+-- Indexes for table `blw_historystok`
 --
 ALTER TABLE `blw_historystok`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_historyviews`
+-- Indexes for table `blw_historyviews`
 --
 ALTER TABLE `blw_historyviews`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_kab`
+-- Indexes for table `blw_kab`
 --
 ALTER TABLE `blw_kab`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_kategori`
+-- Indexes for table `blw_karyawan`
+--
+ALTER TABLE `blw_karyawan`
+  ADD PRIMARY KEY (`id_karyawan`);
+
+--
+-- Indexes for table `blw_kategori`
 --
 ALTER TABLE `blw_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_kec`
+-- Indexes for table `blw_kec`
 --
 ALTER TABLE `blw_kec`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_kemitraan`
+-- Indexes for table `blw_kemitraan`
 --
 ALTER TABLE `blw_kemitraan`
   ADD PRIMARY KEY (`id_kemitraan`);
 
 --
--- Indeks untuk tabel `blw_konfirmasi`
+-- Indexes for table `blw_konfirmasi`
 --
 ALTER TABLE `blw_konfirmasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_kurir`
+-- Indexes for table `blw_kurir`
 --
 ALTER TABLE `blw_kurir`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_mutasi`
+-- Indexes for table `blw_mutasi`
 --
 ALTER TABLE `blw_mutasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_notifikasi`
+-- Indexes for table `blw_notifikasi`
 --
 ALTER TABLE `blw_notifikasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_otpdaftar`
+-- Indexes for table `blw_otpdaftar`
 --
 ALTER TABLE `blw_otpdaftar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_otplogin`
+-- Indexes for table `blw_otplogin`
 --
 ALTER TABLE `blw_otplogin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_pabrik`
+-- Indexes for table `blw_pabrik`
 --
 ALTER TABLE `blw_pabrik`
   ADD PRIMARY KEY (`id_pabrik`);
 
 --
--- Indeks untuk tabel `blw_page`
+-- Indexes for table `blw_page`
 --
 ALTER TABLE `blw_page`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_paket`
+-- Indexes for table `blw_paket`
 --
 ALTER TABLE `blw_paket`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_pembayaran`
+-- Indexes for table `blw_pembayaran`
 --
 ALTER TABLE `blw_pembayaran`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_pesan`
+-- Indexes for table `blw_perusahaan`
+--
+ALTER TABLE `blw_perusahaan`
+  ADD PRIMARY KEY (`id_perusahaan`);
+
+--
+-- Indexes for table `blw_pesan`
 --
 ALTER TABLE `blw_pesan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_petani`
+-- Indexes for table `blw_petani`
 --
 ALTER TABLE `blw_petani`
   ADD PRIMARY KEY (`id_petani`);
 
 --
--- Indeks untuk tabel `blw_preorder`
+-- Indexes for table `blw_preorder`
 --
 ALTER TABLE `blw_preorder`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_produk`
+-- Indexes for table `blw_produk`
 --
 ALTER TABLE `blw_produk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_produkvariasi`
+-- Indexes for table `blw_produkvariasi`
 --
 ALTER TABLE `blw_produkvariasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_produk_petani`
+-- Indexes for table `blw_produk_petani`
 --
 ALTER TABLE `blw_produk_petani`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indeks untuk tabel `blw_profil`
+-- Indexes for table `blw_profil`
 --
 ALTER TABLE `blw_profil`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_promo`
+-- Indexes for table `blw_promo`
 --
 ALTER TABLE `blw_promo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_prov`
+-- Indexes for table `blw_prov`
 --
 ALTER TABLE `blw_prov`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_rekening`
+-- Indexes for table `blw_rekening`
 --
 ALTER TABLE `blw_rekening`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_rekeningbank`
+-- Indexes for table `blw_rekeningbank`
 --
 ALTER TABLE `blw_rekeningbank`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_retail`
+-- Indexes for table `blw_retail`
 --
 ALTER TABLE `blw_retail`
   ADD PRIMARY KEY (`id_retail`);
 
 --
--- Indeks untuk tabel `blw_review`
+-- Indexes for table `blw_review`
 --
 ALTER TABLE `blw_review`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_saldo`
+-- Indexes for table `blw_saldo`
 --
 ALTER TABLE `blw_saldo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_saldodarike`
+-- Indexes for table `blw_saldodarike`
 --
 ALTER TABLE `blw_saldodarike`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_saldohistory`
+-- Indexes for table `blw_saldohistory`
 --
 ALTER TABLE `blw_saldohistory`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_saldotarik`
+-- Indexes for table `blw_saldotarik`
 --
 ALTER TABLE `blw_saldotarik`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_sessdrive`
+-- Indexes for table `blw_sessdrive`
 --
 ALTER TABLE `blw_sessdrive`
   ADD PRIMARY KEY (`timestamp`);
 
 --
--- Indeks untuk tabel `blw_setting`
+-- Indexes for table `blw_setting`
 --
 ALTER TABLE `blw_setting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_statuspesanan`
+-- Indexes for table `blw_statuspesanan`
 --
 ALTER TABLE `blw_statuspesanan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_testimoni`
+-- Indexes for table `blw_tahun`
+--
+ALTER TABLE `blw_tahun`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blw_testimoni`
 --
 ALTER TABLE `blw_testimoni`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_token`
+-- Indexes for table `blw_token`
 --
 ALTER TABLE `blw_token`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_transaksi`
+-- Indexes for table `blw_transaksi`
 --
 ALTER TABLE `blw_transaksi`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `orderid` (`orderid`);
 
 --
--- Indeks untuk tabel `blw_transaksiproduk`
+-- Indexes for table `blw_transaksiproduk`
 --
 ALTER TABLE `blw_transaksiproduk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_upload`
+-- Indexes for table `blw_upload`
 --
 ALTER TABLE `blw_upload`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_userdata`
+-- Indexes for table `blw_userdata`
 --
 ALTER TABLE `blw_userdata`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_variasisize`
+-- Indexes for table `blw_variasisize`
 --
 ALTER TABLE `blw_variasisize`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_variasiwarna`
+-- Indexes for table `blw_variasiwarna`
 --
 ALTER TABLE `blw_variasiwarna`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_voucher`
+-- Indexes for table `blw_voucher`
 --
 ALTER TABLE `blw_voucher`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_wasap`
+-- Indexes for table `blw_wasap`
 --
 ALTER TABLE `blw_wasap`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `blw_wishlist`
+-- Indexes for table `blw_wishlist`
 --
 ALTER TABLE `blw_wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `blw_admin`
+-- AUTO_INCREMENT for table `blw_admin`
 --
 ALTER TABLE `blw_admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_afiliasi`
+-- AUTO_INCREMENT for table `blw_afiliasi`
 --
 ALTER TABLE `blw_afiliasi`
   MODIFY `id_afiliasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_alamat`
+-- AUTO_INCREMENT for table `blw_alamat`
 --
 ALTER TABLE `blw_alamat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_blog`
+-- AUTO_INCREMENT for table `blw_blog`
 --
 ALTER TABLE `blw_blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_booster`
+-- AUTO_INCREMENT for table `blw_booster`
 --
 ALTER TABLE `blw_booster`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_driver_transporter`
+-- AUTO_INCREMENT for table `blw_driver_transporter`
 --
 ALTER TABLE `blw_driver_transporter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_d_transporter`
+-- AUTO_INCREMENT for table `blw_d_transporter`
 --
 ALTER TABLE `blw_d_transporter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_grosir`
+-- AUTO_INCREMENT for table `blw_grosir`
 --
 ALTER TABLE `blw_grosir`
   MODIFY `id_grosir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_historyongkir`
+-- AUTO_INCREMENT for table `blw_historyongkir`
 --
 ALTER TABLE `blw_historyongkir`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_historystok`
+-- AUTO_INCREMENT for table `blw_historystok`
 --
 ALTER TABLE `blw_historystok`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_historyviews`
+-- AUTO_INCREMENT for table `blw_historyviews`
 --
 ALTER TABLE `blw_historyviews`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_kab`
+-- AUTO_INCREMENT for table `blw_kab`
 --
 ALTER TABLE `blw_kab`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=502;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_kategori`
+-- AUTO_INCREMENT for table `blw_karyawan`
+--
+ALTER TABLE `blw_karyawan`
+  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `blw_kategori`
 --
 ALTER TABLE `blw_kategori`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_kec`
+-- AUTO_INCREMENT for table `blw_kec`
 --
 ALTER TABLE `blw_kec`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6995;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_kemitraan`
+-- AUTO_INCREMENT for table `blw_kemitraan`
 --
 ALTER TABLE `blw_kemitraan`
   MODIFY `id_kemitraan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_konfirmasi`
+-- AUTO_INCREMENT for table `blw_konfirmasi`
 --
 ALTER TABLE `blw_konfirmasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_kurir`
+-- AUTO_INCREMENT for table `blw_kurir`
 --
 ALTER TABLE `blw_kurir`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_mutasi`
+-- AUTO_INCREMENT for table `blw_mutasi`
 --
 ALTER TABLE `blw_mutasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_notifikasi`
+-- AUTO_INCREMENT for table `blw_notifikasi`
 --
 ALTER TABLE `blw_notifikasi`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_otpdaftar`
+-- AUTO_INCREMENT for table `blw_otpdaftar`
 --
 ALTER TABLE `blw_otpdaftar`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_otplogin`
+-- AUTO_INCREMENT for table `blw_otplogin`
 --
 ALTER TABLE `blw_otplogin`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_pabrik`
+-- AUTO_INCREMENT for table `blw_pabrik`
 --
 ALTER TABLE `blw_pabrik`
   MODIFY `id_pabrik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_page`
+-- AUTO_INCREMENT for table `blw_page`
 --
 ALTER TABLE `blw_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_paket`
+-- AUTO_INCREMENT for table `blw_paket`
 --
 ALTER TABLE `blw_paket`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_pembayaran`
+-- AUTO_INCREMENT for table `blw_pembayaran`
 --
 ALTER TABLE `blw_pembayaran`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_pesan`
+-- AUTO_INCREMENT for table `blw_perusahaan`
+--
+ALTER TABLE `blw_perusahaan`
+  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `blw_pesan`
 --
 ALTER TABLE `blw_pesan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_petani`
+-- AUTO_INCREMENT for table `blw_petani`
 --
 ALTER TABLE `blw_petani`
   MODIFY `id_petani` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_preorder`
+-- AUTO_INCREMENT for table `blw_preorder`
 --
 ALTER TABLE `blw_preorder`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_produk`
+-- AUTO_INCREMENT for table `blw_produk`
 --
 ALTER TABLE `blw_produk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_produkvariasi`
+-- AUTO_INCREMENT for table `blw_produkvariasi`
 --
 ALTER TABLE `blw_produkvariasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_produk_petani`
+-- AUTO_INCREMENT for table `blw_produk_petani`
 --
 ALTER TABLE `blw_produk_petani`
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_profil`
+-- AUTO_INCREMENT for table `blw_profil`
 --
 ALTER TABLE `blw_profil`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_promo`
+-- AUTO_INCREMENT for table `blw_promo`
 --
 ALTER TABLE `blw_promo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_prov`
+-- AUTO_INCREMENT for table `blw_prov`
 --
 ALTER TABLE `blw_prov`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_rekening`
+-- AUTO_INCREMENT for table `blw_rekening`
 --
 ALTER TABLE `blw_rekening`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_rekeningbank`
+-- AUTO_INCREMENT for table `blw_rekeningbank`
 --
 ALTER TABLE `blw_rekeningbank`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_retail`
+-- AUTO_INCREMENT for table `blw_retail`
 --
 ALTER TABLE `blw_retail`
   MODIFY `id_retail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_review`
+-- AUTO_INCREMENT for table `blw_review`
 --
 ALTER TABLE `blw_review`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_saldo`
+-- AUTO_INCREMENT for table `blw_saldo`
 --
 ALTER TABLE `blw_saldo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_saldodarike`
+-- AUTO_INCREMENT for table `blw_saldodarike`
 --
 ALTER TABLE `blw_saldodarike`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_saldohistory`
+-- AUTO_INCREMENT for table `blw_saldohistory`
 --
 ALTER TABLE `blw_saldohistory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_saldotarik`
+-- AUTO_INCREMENT for table `blw_saldotarik`
 --
 ALTER TABLE `blw_saldotarik`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_setting`
+-- AUTO_INCREMENT for table `blw_setting`
 --
 ALTER TABLE `blw_setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_statuspesanan`
+-- AUTO_INCREMENT for table `blw_statuspesanan`
 --
 ALTER TABLE `blw_statuspesanan`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_testimoni`
+-- AUTO_INCREMENT for table `blw_tahun`
+--
+ALTER TABLE `blw_tahun`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `blw_testimoni`
 --
 ALTER TABLE `blw_testimoni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_token`
+-- AUTO_INCREMENT for table `blw_token`
 --
 ALTER TABLE `blw_token`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_transaksi`
+-- AUTO_INCREMENT for table `blw_transaksi`
 --
 ALTER TABLE `blw_transaksi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_transaksiproduk`
+-- AUTO_INCREMENT for table `blw_transaksiproduk`
 --
 ALTER TABLE `blw_transaksiproduk`
   MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_upload`
+-- AUTO_INCREMENT for table `blw_upload`
 --
 ALTER TABLE `blw_upload`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_userdata`
+-- AUTO_INCREMENT for table `blw_userdata`
 --
 ALTER TABLE `blw_userdata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_variasisize`
+-- AUTO_INCREMENT for table `blw_variasisize`
 --
 ALTER TABLE `blw_variasisize`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_variasiwarna`
+-- AUTO_INCREMENT for table `blw_variasiwarna`
 --
 ALTER TABLE `blw_variasiwarna`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_voucher`
+-- AUTO_INCREMENT for table `blw_voucher`
 --
 ALTER TABLE `blw_voucher`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_wasap`
+-- AUTO_INCREMENT for table `blw_wasap`
 --
 ALTER TABLE `blw_wasap`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `blw_wishlist`
+-- AUTO_INCREMENT for table `blw_wishlist`
 --
 ALTER TABLE `blw_wishlist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
